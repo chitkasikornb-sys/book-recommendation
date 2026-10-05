@@ -1,0 +1,747 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #26352b;
+    background-color: #ffffff;
+}
+
+p {
+    line-height: 1.8;
+}
+
+section {
+    overflow: hidden;
+}
+
+
+/* =====================================
+   COLORS
+===================================== */
+
+.secret-green {
+    background-color: #32462F;
+}
+
+.secret-light {
+    background-color: #f4f6f1;
+}
+
+.secret-navbar {
+    background-color: #263a2b;
+}
+
+.secret-footer {
+    background-color: #1d2b21;
+}
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.secret-navbar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-brand {
+    letter-spacing: 3px;
+}
+
+.nav-link {
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #d9e4d3 !important;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero-section {
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255,255,255,0.08),
+            transparent 30%
+        ),
+        #32462F;
+
+    color: white;
+
+    padding: 110px 0;
+
+    min-height: 680px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* วงกลมตกแต่ง */
+
+.hero-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    border-radius: 50%;
+
+    right: -100px;
+
+    top: -100px;
+}
+
+
+.hero-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    border-radius: 50%;
+
+    left: -70px;
+
+    bottom: -70px;
+}
+
+
+.letter-spacing {
+
+    letter-spacing: 5px;
+
+    font-size: 13px;
+
+    opacity: 0.8;
+}
+
+
+/* ปุ่ม Hero */
+
+.hero-section .btn {
+
+    transition: 0.3s;
+}
+
+
+.hero-section .btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* =====================================
+   BOOK COVER
+===================================== */
+
+.book-cover {
+
+    max-height: 500px;
+
+    width: auto;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.35);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+.book-cover:hover {
+
+    transform:
+        translateY(-10px)
+        rotate(1deg);
+
+    box-shadow:
+        0 35px 60px rgba(0,0,0,0.45);
+}
+
+
+/* =====================================
+   TEXT
+===================================== */
+
+.text-uppercase {
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================
+   BOOK INFORMATION
+===================================== */
+
+.info-card {
+
+    padding: 35px 20px;
+
+    border:
+        1px solid #e1e5df;
+
+    border-radius: 18px;
+
+    background-color: white;
+
+    height: 100%;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.info-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.08);
+}
+
+
+.info-card i {
+
+    color: #32462F;
+
+    transition: 0.3s;
+}
+
+
+.info-card:hover i {
+
+    transform:
+        scale(1.15);
+}
+
+
+/* =====================================
+   CONCEPT
+===================================== */
+
+.concept-card {
+
+    background-color: white;
+
+    padding: 45px 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.concept-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 20px 35px rgba(0,0,0,0.10);
+}
+
+
+/* ไอคอนวงกลม */
+
+.icon-circle {
+
+    width: 85px;
+
+    height: 85px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background-color: #32462F;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 32px;
+
+    transition: 0.3s;
+}
+
+
+.concept-card:hover .icon-circle {
+
+    transform:
+        scale(1.1)
+        rotate(5deg);
+}
+
+
+/* =====================================
+   LESSON
+===================================== */
+
+.lesson-item {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+
+.lesson-item:hover {
+
+    background-color: #f4f6f1;
+
+    transform:
+        translateX(8px);
+}
+
+
+.lesson-number {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: #879b80;
+
+    min-width: 55px;
+}
+
+
+/* =====================================
+   QUOTE
+===================================== */
+
+.quote-box {
+
+    background-color: #f3f5f0;
+
+    padding: 65px 45px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.quote-box::before {
+
+    content: "“";
+
+    position: absolute;
+
+    font-size: 180px;
+
+    color: #32462F;
+
+    opacity: 0.05;
+
+    top: -60px;
+
+    left: 10px;
+}
+
+
+.quote-box i {
+
+    color: #32462F;
+
+    position: relative;
+}
+
+
+/* =====================================
+   KNOWLEDGE
+===================================== */
+
+.knowledge-number {
+
+    font-size: 70px;
+
+    font-weight: bold;
+
+    color: #dce4d8;
+
+    line-height: 1;
+
+    margin-bottom: 15px;
+}
+
+
+.knowledge-image {
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.08);
+}
+
+
+.knowledge-image img {
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.knowledge-image:hover img {
+
+    transform:
+        scale(1.04);
+}
+
+
+/* =====================================
+   THREE STEPS
+===================================== */
+
+.step-card {
+
+    padding: 40px 25px;
+
+    border:
+        1px solid rgba(255,255,255,0.18);
+
+    border-radius: 20px;
+
+    height: 100%;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.step-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    background-color:
+        rgba(255,255,255,0.08);
+}
+
+
+.step-number {
+
+    font-size: 60px;
+
+    font-weight: bold;
+
+    opacity: 0.25;
+
+    margin-bottom: 10px;
+}
+
+
+/* =====================================
+   PERSONAL OPINION
+===================================== */
+
+.personal-title {
+
+    background-color: #32462F;
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.personal-title::after {
+
+    content: "“";
+
+    position: absolute;
+
+    font-size: 220px;
+
+    right: -20px;
+
+    bottom: -100px;
+
+    opacity: 0.08;
+}
+
+
+.personal-text {
+
+    background-color: #f3f5f0;
+
+    transition: 0.3s;
+}
+
+
+.personal-text:hover {
+
+    background-color: #e9eee5;
+}
+
+
+/* =====================================
+   RECOMMEND
+===================================== */
+
+.recommend-card {
+
+    background-color: white;
+
+    padding: 40px 20px;
+
+    border-radius: 20px;
+
+    height: 100%;
+
+    border:
+        1px solid #e0e4dd;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.recommend-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.08);
+}
+
+
+.recommend-card i {
+
+    font-size: 42px;
+
+    color: #32462F;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    transition: 0.3s;
+}
+
+
+.recommend-card:hover i {
+
+    transform:
+        scale(1.15);
+}
+
+
+/* =====================================
+   AUTHOR
+===================================== */
+
+.author-image {
+
+    width: 300px;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border:
+        8px solid #f3f5f0;
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.12);
+
+    transition: 0.4s;
+}
+
+
+.author-image:hover {
+
+    transform:
+        scale(1.04);
+}
+
+
+/* =====================================
+   SUMMARY
+===================================== */
+
+.summary-section {
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,0.07),
+            transparent 45%
+        ),
+        #32462F;
+
+    color: white;
+
+    position: relative;
+}
+
+
+.summary-text {
+
+    max-width: 750px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.secret-footer hr {
+
+    border-color:
+        rgba(255,255,255,0.2);
+}
+
+
+/* =====================================
+   BADGE
+===================================== */
+
+.badge {
+
+    padding:
+        10px 15px;
+
+    border-radius:
+        50px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+
+        padding: 80px 0;
+
+    }
+
+    .book-cover {
+
+        max-height: 420px;
+
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .hero-section {
+
+        padding: 65px 0;
+
+        min-height: auto;
+
+    }
+
+    .hero-section h1 {
+
+        font-size: 50px;
+
+    }
+
+    .book-cover {
+
+        max-height: 350px;
+
+    }
+
+    .lesson-item {
+
+        gap: 10px;
+
+    }
+
+    .lesson-number {
+
+        min-width: 45px;
+
+        font-size: 25px;
+
+    }
+
+    .quote-box {
+
+        padding:
+            45px 25px;
+
+    }
+
+    .author-image {
+
+        width: 230px;
+
+        height: 230px;
+
+    }
+
+}
